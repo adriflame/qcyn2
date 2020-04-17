@@ -372,6 +372,7 @@ body {
   font-weight: 600;
   font-size: 9px;
   letter-spacing: 0.2px;
+  text-transform: uppercase;
 }
 
 /* Generic Styles */
