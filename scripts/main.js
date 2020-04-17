@@ -241,7 +241,7 @@ function populateRanking() {
 const abbreviatedCompanies = {}
 
 function populateRankingEntry(trainee, currRank) {
-  let modifiedCompany = trainee.name_hangul;
+  let modifiedCompany = trainee.company.toUppercase();
   modifiedCompany = modifiedCompany.replace();
   if (abbreviatedCompanies[modifiedCompany]) {
     modifiedCompany = abbreviatedCompanies[modifiedCompany];
