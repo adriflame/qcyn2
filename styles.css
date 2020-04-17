@@ -332,13 +332,12 @@ body {
   border-radius: 50%;
   background-color: var(--a-rank);
   box-sizing: border-box;
-  padding: 2px;
   /* badge text options */
   font-weight: 900;
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
   color: white;
-  line-height: 1;
+  line-height: 20px;
 }
 .ranking__row-text {
   font-family: 'Open Sans', sans-serif;
