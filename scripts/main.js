@@ -193,8 +193,8 @@ function populateTableEntry(trainee) {
     <div class="table__entry-text">
       <span class="name"><strong>${trainee.name_romanized}</strong></span>
       <span class="hangul">(${trainee.name_hangul})</span>
-      <span class="companyandyear">${trainee.company.toUpperCase()} •
-      ${trainee.birthyear}</span>
+      <span class="companyandyear">${trainee.birthyear} •
+      ${trainee.company.toUpperCase()}</span>
     </div>
   </div>`;
   return tableEntry;
@@ -238,15 +238,11 @@ function populateRanking() {
   }
 }
 
-const abbreviatedCompanies = {
-  "RAINBOW BRIDGE WORLD": "RBW",
-  "BLOCKBERRY CREATIVE": "BBC",
-  "INDIVIDUAL TRAINEE": "INDIVIDUAL",
-}
+const abbreviatedCompanies = {}
 
 function populateRankingEntry(trainee, currRank) {
   let modifiedCompany = trainee.company.toUpperCase();
-  modifiedCompany = modifiedCompany.replace("ENTERTAINMENT", "ENT.");
+  modifiedCompany = modifiedCompany.replace();
   if (abbreviatedCompanies[modifiedCompany]) {
     modifiedCompany = abbreviatedCompanies[modifiedCompany];
   }
@@ -266,7 +262,6 @@ function populateRankingEntry(trainee, currRank) {
     </div>
     <div class="ranking__row-text">
       <div class="name"><strong>${trainee.name_romanized}</strong></div>
-      <div class="company">${modifiedCompany}</div>
     </div>
   </div>`;
   return rankingEntry;
@@ -318,30 +313,7 @@ function swapTrainees(index1, index2) {
 // <original>: [<alternate1>, <alternate2>, <alternate3>, etc...]
 // <original> is the original name as appearing on csv
 // all of it should be lower case
-const alternateRomanizations = {
-  'heo yunjin': ['heo yoonjin', 'huh yoonjin', 'huh yunjin'],
-  'go yujin': ['ko yoojin', 'ko yujin', 'go yoojin'],
-  'kim yubin': ['kim yoobin'],
-  'lee yoojun': ['lee yujeong'],
-  'shin suhyun': ['shin soohyun', 'shin soohyeon', 'shin suhyeon'],
-  'jo ahyoung': ['cho ahyoung', 'cho ahyeong'],
-  'yu minyoung': ['yoo minyeong', 'yu minyeong', 'yoo minyoung'],
-  'park haeyoon': ['park haeyun'],
-  'park jinhee': ['jinny park'],
-  'jo sarang': ['cho sarang'],
-  'park chanju': ['park chanjoo'],
-  'lee gaeun': ['lee kaeun'],
-  'na goeun': ['na koeun'],
-  'ahn yujin': ['ahn yoojin'],
-  'jo gahyun': ['cho gahyun', 'jo kahyun', 'cho kahyun', 'jo kahyeon', 'cho kahyeon'],
-  'jo yuri': ['cho yuri'],
-  'yoon haesol': ['yun haesol'],
-  'kim minju': ['kim minjoo'],
-  'lee seunghyun': ['lee seunghyeon'],
-  'jo yeongin': ['cho yeongin', 'cho youngin', 'jo youngin'],
-  'kim suyun': ['kim sooyoon'],
-  'kim sihyun': ['kim shihyun', 'kim sihyeon']
-};
+const alternateRomanizations = {};
 
 // uses the current filter text to create a subset of trainees with matching info
 function filterTrainees(event) {
@@ -389,7 +361,7 @@ function removeRankedTrainee(trainee) {
   return false;
 }
 
-const currentURL = "https://produce48.github.io/";
+const currentURL = "https://weeabookstore.github.io/q/";
 // Serializes the ranking into a string and appends that to the current URL
 function generateShareLink() {
   let shareCode = ranking.map(function (trainee) {
