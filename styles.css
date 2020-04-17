@@ -4,20 +4,20 @@
   --banner-bg-end: #6cb0ff;
   --produce-gray: #e0e0e0;
   --search-text-gray: #949494;
-  --search-gray: #e0e0e0;
+  --search-gray: #f0f0f0;
   --affil-gray: #949494;
   --name-gray: black;
   --other-name-gray: #949494;
   --ranking-affil-gray: #949494;
   --save-box-gray: #949494;
 
-  --checked-blue: #6cb0ffc0;
+  --checked-blue: #6cb0ffe0;
 
   /* ranking border colors */
   --a-rank: #ff6cb0;
   --b-rank: #6cb0ff;
-  --c-rank: #ffff6c;
-  --d-rank: #6cff6c;
+  --c-rank: #ffd800;
+  --d-rank: #00ff80;
   --f-rank: #a6a6a4;
   --no-rank: #949494;
 }
@@ -64,8 +64,8 @@ body {
 
 /* Styles for table */
 #table {
-  height: 50vh;
-  min-height: 500px;
+  height: 60vh;
+  min-height: 590px;
   width: 300px;
   box-shadow: 0px 2px 4px 0.1px var(--produce-gray);
   border-radius: 8px;
@@ -291,8 +291,8 @@ body {
 }
 .ranking__entry-view {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   margin: 10px 20px;
 }
 .ranking__entry-icon {
