@@ -241,7 +241,7 @@ function populateRanking() {
 const abbreviatedCompanies = {}
 
 function populateRankingEntry(trainee, currRank) {
-  let modifiedCompany = trainee.company.toUpperCase();
+  let modifiedCompany = trainee.name_hangul.toUpperCase();
   modifiedCompany = modifiedCompany.replace();
   if (abbreviatedCompanies[modifiedCompany]) {
     modifiedCompany = abbreviatedCompanies[modifiedCompany];
@@ -262,7 +262,7 @@ function populateRankingEntry(trainee, currRank) {
     </div>
     <div class="ranking__row-text">
       <div class="name"><strong>${trainee.name_romanized}</strong></div>
-      <div class="company">${trainee.name_hangul}</div>
+      <div class="company">${modifiedCompany}</div>
     </div>
   </div>`;
   return rankingEntry;
