@@ -238,7 +238,14 @@ function populateRanking() {
   }
 }
 
+const abbreviatedCompanies = {}
+
 function populateRankingEntry(trainee, currRank) {
+  let modifiedCompany = trainee.company.toUpperCase();
+  modifiedCompany = modifiedCompany.replace("ENTERTAINMENT", "ENT.");
+  if (abbreviatedCompanies[modifiedCompany]) {
+    modifiedCompany = abbreviatedCompanies[modifiedCompany];
+  }
   let eliminated = (showEliminated && trainee.eliminated) && "eliminated";
   let top12 = (showTop12 && trainee.top12) && "top12";
   const rankingEntry = `
