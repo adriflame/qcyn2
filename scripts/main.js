@@ -76,11 +76,10 @@ function convertCSVArrayToTraineeData(csvArrays) {
   trainees = csvArrays.map(function(traineeArray, index) {
     trainee = {};
     trainee.name_romanized = traineeArray[0];
-    if (traineeArray[2] === "-") {
+    if (traineeArray[2] === "null") {
       // trainee only has hangul
-      trainee.name_hangul = traineeArray[1];
+      trainee.name_hangul = "test";
     } else {
-      trainee.name_japanese = traineeArray[1];
       trainee.name_hangul = traineeArray[2];
     }
     trainee.company = traineeArray[3];
@@ -239,6 +238,11 @@ function populateRanking() {
 }
 
 function populateRankingEntry(trainee, currRank) {
+  let modifiedCompany = trainee.company.toUpperCase();
+  modifiedCompany = modifiedCompany.replace("ENTERTAINMENT", "ENT.");
+  if (abbreviatedCompanies[modifiedCompany]) {
+    modifiedCompany = abbreviatedCompanies[modifiedCompany];
+  }
   let eliminated = (showEliminated && trainee.eliminated) && "eliminated";
   let top12 = (showTop12 && trainee.top12) && "top12";
   const rankingEntry = `
