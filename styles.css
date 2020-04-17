@@ -43,7 +43,7 @@ body {
   background-image: url(assets/bg.jpg);
   background-size: cover;
   background-position: top;
-  padding: 20px;
+  padding: 30px;
 
   /* these will be unnecessary once we get the banner image */
   color: #6cb0ff;
