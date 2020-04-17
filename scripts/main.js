@@ -76,7 +76,7 @@ function convertCSVArrayToTraineeData(csvArrays) {
   trainees = csvArrays.map(function(traineeArray, index) {
     trainee = {};
     trainee.name_romanized = traineeArray[0];
-    if (traineeArray[2] === "null") {
+    if (traineeArray[2] === null) {
       // trainee only has hangul
       trainee.name_hangul = "test";
     } else {
