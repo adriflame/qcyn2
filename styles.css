@@ -1,7 +1,7 @@
 /* define constants up here */
 :root {
-  --banner-bg-start: #fd5e6d;
-  --banner-bg-end: #ef5079;
+  --banner-bg-start: #ff6cb0;
+  --banner-bg-end: #6cb0ff;
   --produce-gray: #e4e4e4;
   --search-text-gray: #949494;
   --search-gray: #f2f2f2;
@@ -38,7 +38,7 @@ body {
 
 /* Styles for banner */
 #top-banner {
-  background: radial-gradient(circle, var(--banner-bg-start), var(--banner-bg-end) 60%);
+  background: linear-gradient(to bottom right, var(--banner-bg-start), var(--banner-bg-end));
   /* background-color: var(--banner-bg-color); */
   padding: 20px;
 
